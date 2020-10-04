@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-
         recyclerViewMascota = (RecyclerView) findViewById(R.id.rvMascota);
         recyclerViewMascota.setLayoutManager(new LinearLayoutManager(this));
 
@@ -57,22 +56,35 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    /*Ir al segundo activity al tocar la estrella*/
+    /*Ir al segundo activity al tocar la estrella o el menu*/
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        if (item.getItemId() == R.id.action_favorite){
+            Intent siguiente = new Intent(this, MejoresMascotas.class);
+            startActivity(siguiente);
+        } else if (item.getItemId() == R.id.menuContacto){
+            Intent contacto = new Intent(this, Contacto.class);
+            startActivity(contacto);
+        } else if (item.getItemId() == R.id.menuAcercaDe) {
+            Intent acerca = new Intent(this, AcercaDe.class);
+            startActivity(acerca);
+        }
+
+
+        //Otra forma de hacerlo es con switch
+        /*switch (item.getItemId()){
             case R.id.action_favorite:
                 Intent siguiente = new Intent(this, MejoresMascotas.class);
                 startActivity(siguiente);
-            case R.id.action_settings:
-                return true;
+            case R.id.menuContacto:
+                Intent contacto = new Intent(this, Contacto.class);
+                startActivity(contacto);
+            case R.id.acerca:
+                Intent acerca = new Intent(this, AcercaDe.class);
+                startActivity(acerca);
             default:
                 return super.onOptionsItemSelected(item);
-        }
+        }*/
+        return super.onOptionsItemSelected(item);
     }
-    //Método para pasar al siguiente activity
-    /*public void Siguiente(View view){
-        Intent siguiente = new Intent(this, MejoresMascotas.class);
-        startActivity(siguiente);
-    }*/
 }

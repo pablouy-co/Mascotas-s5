@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Mascotas</string>
     <string name="menu_mascotas">Rate de mascotas</string>
-    <string name="action_settings">Menu</string>
+    <string name="action_settings1">Contacto</string>
+    <string name="action_settings2">Acerca de</string>
+    <string name="activityContacto">Menu de contacto</string>
+    <string name="menu_acerca_de">Acerca de nosotros</string>
 </resources>

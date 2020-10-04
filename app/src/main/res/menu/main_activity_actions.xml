@@ -10,8 +10,12 @@
         android:title="@string/menu_mascotas"
         app:showAsAction="ifRoom" />
 
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item android:id="@+id/menuContacto"
+        android:title="@string/action_settings1"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/menuAcercaDe"
+        android:title="@string/action_settings2"
         app:showAsAction="never"
         />
 -->
