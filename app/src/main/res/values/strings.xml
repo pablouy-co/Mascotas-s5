@@ -5,4 +5,10 @@
     <string name="action_settings2">Acerca de</string>
     <string name="activityContacto">Menu de contacto</string>
     <string name="menu_acerca_de">Acerca de nosotros</string>
+    <string name="texto_acerca_de">Curso de Desarrollo de aplicaciones Android</string>
+    <string name="et_hint_nombre">Nombre completo</string>
+    <string name="et_hint_email">Correo electronico</string>
+    <string name="et_hint_mensaje">Mensaje</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

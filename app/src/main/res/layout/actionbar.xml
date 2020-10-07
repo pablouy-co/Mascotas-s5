@@ -9,5 +9,6 @@
     android:elevation="@dimen/elevacion_actionbar"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways"
     >
 </androidx.appcompat.widget.Toolbar>

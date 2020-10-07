@@ -24,6 +24,8 @@ public class MejoresMascotas extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         /*Navegacion hacia atrás*/
+        //En AndroidManifest hay que indicar quien es la actividad padre
+        //y en el layout agregar el include
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         /*Recycler views*/
@@ -33,7 +35,6 @@ public class MejoresMascotas extends AppCompatActivity {
         adaptadorMascota = new RecyclerViewAdaptador(obtenerMascota());
         recyclerViewMascota.setAdapter(adaptadorMascota);
     }
-
 
     public List<MascotaModelo> obtenerMascota() {
         List<MascotaModelo> mascota = new ArrayList<>();

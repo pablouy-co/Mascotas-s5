@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,12 +7,62 @@
     android:layout_height="match_parent"
     tools:context=".Contacto">
 
-    <TextView
-        android:id="@+id/contacto"
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="500dp"
+        android:inputType="textPersonName"
+        android:hint="@string/et_hint_nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        tools:layout_editor_absoluteX="16dp"
+        />
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="400dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/et_hint_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        tools:layout_editor_absoluteX="16dp"
+        />
+
+    <EditText
+        android:id="@+id/etMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginBottom="300dp"
+        android:inputType="textShortMessage"
+        android:hint="@string/et_hint_mensaje"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+        tools:layout_editor_absoluteX="16dp"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMiFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:text="@string/activityContacto" />
+        android:layout_gravity="bottom"
+        android:src="@drawable/mail_5_64x64" />
+</LinearLayout>
 
-</RelativeLayout>
+    <include
+        android:id="@+id/my_toolbar"
+        layout="@layout/actionbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="107dp">
+
+    </include>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
